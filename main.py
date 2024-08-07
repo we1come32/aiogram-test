@@ -19,6 +19,8 @@ if __name__ == '__main__':
     bot = Bot(config.BOT_TOKEN)
     try:
         for i in range(1, 100):
+            if i == 8:
+                continue
             module = importlib.import_module(f'tasks.number_{i}')
             dp.include_router(module.router)
             logger.info("Imported tasks.number_{number}", number=i)

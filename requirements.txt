@@ -4,3 +4,4 @@ loguru~=0.7.2
 sqlmodel~=0.0.21
 aiohttp[speedups]~=3.9.0
 ngrok~=1.4.0
+aioschedule~=0.5.2
