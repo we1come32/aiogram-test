@@ -1,4 +1,4 @@
-from sqlmodel import select, Session, SQLModel, create_engine
+from sqlmodel import select, Session, SQLModel, create_engine, Field
 from aiogram import Router
 from aiogram.filters import Command, StateFilter
 from aiogram.fsm.context import FSMContext
@@ -12,9 +12,12 @@ engine = create_engine(config.DATABASE)
 
 
 class User(SQLModel, table=True):
-    id: int
+    id: int = Field(primary_key=True)
     name: str
     age: int
+
+
+SQLModel.metadata.create_all(engine)
 
 
 class Steps(StatesGroup):
