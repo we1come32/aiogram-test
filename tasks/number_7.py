@@ -13,7 +13,6 @@ router = Router()
 @router.message(Command(commands=['weather']), StateFilter(None))
 async def get_weather(message: Message):
     command = message.text.split(' ', maxsplit=1)
-    print(command)
     if len(command) == 1:
         return await message.answer("Напишите ещё город")
     city_name = command[1]
