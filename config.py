@@ -11,3 +11,6 @@ assert BOT_TOKEN
 CACHE_STORAGE = getenv('CACHE_STORAGE', '')
 
 DATABASE = getenv('DATABASE', 'sqlite:///cache.db')
+
+WEATHER_API_TOKEN = getenv('WEATHER_API_TOKEN', '')  # Для сервиса https://www.weatherapi.com
+assert WEATHER_API_TOKEN
