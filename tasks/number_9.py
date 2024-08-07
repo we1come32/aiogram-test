@@ -26,7 +26,7 @@ async def notifier():
 
 
 async def scheduler():
-    aioschedule.every().day.at("11:34").do(notifier)
+    aioschedule.every().day.at("9:00").do(notifier)
     while True:
         await aioschedule.run_pending()
         await asyncio.sleep(1)
